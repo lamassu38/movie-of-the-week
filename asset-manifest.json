@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-of-the-week/static/css/main.ca57846c.css",
+    "main.js": "/movie-of-the-week/static/js/main.b8b04d6c.js",
+    "index.html": "/movie-of-the-week/index.html",
+    "main.ca57846c.css.map": "/movie-of-the-week/static/css/main.ca57846c.css.map",
+    "main.b8b04d6c.js.map": "/movie-of-the-week/static/js/main.b8b04d6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca57846c.css",
+    "static/js/main.b8b04d6c.js"
+  ]
+}
