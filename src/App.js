@@ -6,30 +6,34 @@ const App = () => {
   const [movies, setMovies] = useState(movieList);
   const [seenMovies, setSeenMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState('');
-  const [movieName, setMovieName] = useState('');
-  const [movieYear, setMovieYear] = useState('');
-  const [movieDirector, setMovieDirector] = useState('');
-  const [movieDescription, setMovieDescription] = useState('');
+  const [name, setName] = useState('');
+  const [year, setYear] = useState('');
+  const [director, setDirector] = useState('');
+  const [description, setDescription] = useState('');
 
   
   const handleAddButtonClick = () => {
-    setMovies(mv => [...mv, {id: getRandomInt(1000), name: movieName, year: movieYear, director: movieDirector, description: movieDescription}]);
-    setMovieName('');
-    setMovieYear('');
-    setMovieDirector('');
-    setMovieDescription('');
+    setMovies(mv => [...mv, {id: getRandomInt(1000), name: name, year: year, director: director, description: description}]);
+    setName('');
+    setYear('');
+    setDirector('');
+    setDescription('');
   };
 
-  const handleInputChange = e => {
-    if (e.target.name === 'movieName'){
-      setMovieName(e.target.value);
-    } else if (e.target.name === 'movieYear'){
-      setMovieYear(e.target.value);
-    } else if (e.target.name === 'movieDirector'){
-      setMovieDirector(e.target.value);
-    } else if (e.target.name === 'movieDescription'){
-      setMovieDescription(e.target.value);
-    }; 
+  const handleName = e => {
+    setName(e.target.value)
+  };
+
+  const handleYear = e => {
+    setYear(e.target.value)
+  };
+
+  const handleDirector = e => {
+    setDirector(e.target.value)
+  };
+
+  const handleDescription = e => {
+    setDescription(e.target.value)
   };
 
   const getRandomInt = max => {
@@ -72,13 +76,13 @@ const App = () => {
          )}
          
          <p>Name:</p>
-         <input name='movieName' onChange={handleInputChange} value={movieName}/>
+         <input name='name' onChange={handleName} value={name}/>
          <p>Year:</p>
-         <input name='movieYear' onChange={handleInputChange} value={movieYear}/>
+         <input name='year' onChange={handleYear} value={year}/>
          <p>Director:</p>
-         <input name='movieDirector' onChange={handleInputChange} value={movieDirector}/>
+         <input name='director' onChange={handleDirector} value={director}/>
          <p>Description:</p>
-         <input name='movieDescription' onChange={handleInputChange} value={movieDescription}/>
+         <input name='description' onChange={handleDescription} value={description}/>
          <button onClick={handleAddButtonClick}>Add Movie</button>
       </header>
       <body>
